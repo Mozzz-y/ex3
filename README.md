@@ -1,28 +1,36 @@
-# PLAYGROUND — каталог видеоигр
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Учебный проект на Next.js + Bun + TypeScript + Tailwind CSS с карточками на основе shadcn/ui.
+## Getting Started
 
-## Запуск
+First, run the development server:
 
 ```bash
-bun install
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
 bun dev
 ```
 
-Откройте http://localhost:3000.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Структура
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- `app/page.tsx` — главная страница, только собирает серверный компонент каталога.
-- `components/catalog.tsx` — **серверный компонент**. Здесь хранится массив `products` с данными 12 игр; он передаётся в `ProductList` через проп `products`.
-- `components/product-list.tsx` — **клиентский компонент** (`"use client"`). Получает массив через типизированные props и генерирует карточки одним шаблоном с помощью `products.map(...)`.
-- `components/ui/card.tsx` — набор компонентов Card в стиле shadcn/ui.
-- `public/games/*.svg` — SVG-обложки-заглушки, созданные специально для учебного проекта.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Как выполнено задание
+## Learn More
 
-1. Каталог — серверный компонент, данные находятся на серверной стороне.
-2. Список товаров — клиентский компонент, данные передаются ему через props.
-3. Все 12 карточек создаются из одного JSX-шаблона через `map`, у каждой карточки есть `key`.
-4. Карточки используют `Card`, `CardHeader`, `CardTitle`, `CardContent`, `CardFooter` и Tailwind CSS.
-5. Для простоты нет сложных анимаций и сторонних API.
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
